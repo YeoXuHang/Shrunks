@@ -1,0 +1,25 @@
+modLoader = "javafml"
+loaderVersion = "[40,)"
+license = "All Rights Reserved"
+[[mods]]
+modId = "shrunk"
+displayName = "Shrunk"
+version = "1.0.0"
+#displayURL="http://example.com/"
+logoFile="Shrunk.png"
+authors = "Ayaan, YeoXuHang, Hamza"
+description = '''
+Shrunk is a mod that adds a shrunken dimension in which there are giant structures and bugs.
+'''
+[[dependencies.shrunk]]
+modId = "forge"
+mandatory = true
+versionRange = "[40,)"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.shrunk]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.18.2,1.19)"
+ordering = "NONE"
+side = "BOTH"
