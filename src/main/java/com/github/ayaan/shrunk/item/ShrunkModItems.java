@@ -20,6 +20,13 @@ public class ShrunkModItems {
     public static final RegistryObject<ForgeSpawnEggItem> ORCHID_MANTIS_SPAWN_EGG = ITEMS.register("orchid_mantis_spawn_egg",
             () -> new ForgeSpawnEggItem(ShrunkModEntityTypes.ORCHID_MANTIS,13975924, 15656942,
                     new Item.Properties().tab(ShrunkModTab.SHRUNK_TAB)));
+
+    public static final RegistryObject<Item> RAW_GRUB_MEAT = ITEMS.register("raw_grub_meat",
+            () -> new Item(new Item.Properties().tab(ShrunkModTab.SHRUNK_TAB).food(ModFoods.RAW_GRUB_MEAT)));
+
+    public static final RegistryObject<Item> COOKED_GRUB_MEAT = ITEMS.register("cooked_grub_meat",
+            () -> new Item(new Item.Properties().tab(ShrunkModTab.SHRUNK_TAB).food(ModFoods.COOKED_GRUB_MEAT)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
