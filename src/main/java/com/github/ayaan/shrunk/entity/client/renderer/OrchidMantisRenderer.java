@@ -2,6 +2,7 @@ package com.github.ayaan.shrunk.entity.client.renderer;
 
 import com.github.ayaan.shrunk.ShrunkMod;
 import com.github.ayaan.shrunk.entity.client.model.OrchidMantisModel;
+import com.github.ayaan.shrunk.entity.client.renderer.layer.OrchidMantisSaddleLayer;
 import com.github.ayaan.shrunk.entity.custom.OrchidMantisEntity;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
@@ -14,6 +15,7 @@ public class OrchidMantisRenderer extends MobRenderer<OrchidMantisEntity, Orchid
 
     public OrchidMantisRenderer(EntityRendererProvider.Context context) {
         super(context, new OrchidMantisModel<>(context.bakeLayer(OrchidMantisModel.LAYER_LOCATION)), 0.7F);
+        this.addLayer(new OrchidMantisSaddleLayer(this));
     }
 
     @Override
