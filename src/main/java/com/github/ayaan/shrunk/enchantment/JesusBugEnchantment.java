@@ -4,7 +4,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.level.Level;
@@ -15,7 +14,7 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.CollisionContext;
 
 public class JesusBugEnchantment extends Enchantment {
-    public JesusBugEnchantment(Enchantment.Rarity pRarity, EquipmentSlot... pApplicableSlots) {
+    public JesusBugEnchantment(Rarity pRarity, EnchantmentCategory armorFeet, EquipmentSlot... pApplicableSlots) {
         super(pRarity, EnchantmentCategory.ARMOR_FEET, pApplicableSlots);
     }
 
@@ -38,11 +37,9 @@ public class JesusBugEnchantment extends Enchantment {
 
 
     public static void onEntityMoved(LivingEntity pLiving, Level pLevel, BlockPos pPos, int pLevelConflicting) {
-        Player player = null;
-        Level level = null;
-        if (!player.isCreative() && level.getBlockState(player.blockPosition().below()).is(Blocks.WATER)) {
-            player.setDeltaMovement(player.getDeltaMovement().multiply(1, 0, 1));
-        }
+
+
+
     }
 
 }
