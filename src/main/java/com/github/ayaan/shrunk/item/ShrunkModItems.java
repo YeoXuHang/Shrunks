@@ -27,6 +27,12 @@ public class ShrunkModItems {
     public static final RegistryObject<Item> COOKED_GRUB_MEAT = ITEMS.register("cooked_grub_meat",
             () -> new Item(new Item.Properties().tab(ShrunkModTab.SHRUNK_TAB).food(ModFoods.COOKED_GRUB_MEAT)));
 
+    public static final RegistryObject<Item> RAW_SPRINGTAIL_LEG = ITEMS.register("raw_springtail_leg",
+            () -> new Item(new Item.Properties().tab(ShrunkModTab.SHRUNK_TAB).food(ModFoods.RAW_SPRINGTAIL_LEG)));
+
+    public static final RegistryObject<Item> COOKED_SPRINGTAIL_LEG = ITEMS.register("cooked_springtail_leg",
+            () -> new Item(new Item.Properties().tab(ShrunkModTab.SHRUNK_TAB).food(ModFoods.COOKED_SPRINGTAIL_LEG)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
